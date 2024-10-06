@@ -1,0 +1,18 @@
+{
+    "name": "Diaries Of A Hero",
+    "albumCover": "/images/albumCovers/DiariesOfAHero.png",
+    "releaseYear": "2014",
+    "tracks": [
+        {
+            "id": 1,
+            "name": "You Don't Own mw",
+            "path": "/songs/You Don't Own Me (Radio Mix).mp3"
+        },
+        {
+            "id": 2,
+            "name": "Human",
+            "path": "/songs/Rag'n'Bone Man - Human (Lyrics).mp3"
+        }
+       
+    ]
+}

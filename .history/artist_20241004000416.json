@@ -1,0 +1,22 @@
+{
+  "name": "Diaries Of A Hero",
+  "albumCover": "/images/albumCovers/DiariesOfAHero.png",
+  "releaseYear": "2014",
+  "tracks": [
+    {
+      "id": 1,
+      "name": "Intro",
+      "path": "/songs/Intro.mp3"
+    },
+    {
+      "id": 2,
+      "name": "Solitude",
+      "path": "/songs/Solitude.mp3"
+    },
+    {
+      "id": 3,
+      "name": "Manimal",
+      "path": "/songs/Manimal.mp3"
+    }
+  ]
+}

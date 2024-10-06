@@ -1,0 +1,17 @@
+{
+  "name": "Songs",
+  "albumCover": "/images/albumCovers/DiariesOfAHero.png",
+  "releaseYear": "2014",
+  "tracks": [
+    {
+      "id": 1,
+      "name": "Human",
+      "path": "/songs/Ateraxia.mp3"
+    },
+    {
+      "id": 2,
+      "name": "You DOn",
+      "path": "/songs/Brother.mp3"
+    }
+  ]
+}

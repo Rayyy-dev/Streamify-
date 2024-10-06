@@ -1,0 +1,8 @@
+<script setup>
+import{ref,}
+</script>
+
+<template>
+  <div class="bg-red-400">COOL</div>
+</template>
+
