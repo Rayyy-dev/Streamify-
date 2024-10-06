@@ -2,14 +2,22 @@
 import { ref, watch } from 'vue';
 import CategorySelect from '../components/CategorySelect.vue';
 import spotifyApi from '../Api/spotifyApi';
+import { getAccessToken } from '../utils/spotify-auth';
 
 const searchQuery = ref('');
 const searchResults = ref([]);
 
 const performSearch = async () => {
   try {
-    const data = await spotifyApi.search(searchQuery.value);
-    searchResults.value = data.tracks.items.map(track => ({
+    const accessToken = getAccessToken();
+    if (!accessToken) {
+      console.error('No access token available');
+      return;
+    }
+    
+    spotifyApi.setAccessToken(accessToken);
+    const data = await spotifyApi.searchTracks(searchQuery.value);
+    searchResults.value = data.body.tracks.items.map(track => ({
       id: track.id,
       name: track.name,
       artist: track.artists[0].name
@@ -51,6 +59,16 @@ watch(searchQuery, () => {
 
         <h2 class="text-2xl font-bold text-white mb-4">Browse All</h2>
         <div class="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6">
+            <CategorySelect category="Podcasts" image="https://picsum.photos/id/40/300/300" />
+            <CategorySelect category="Audiobooks" image="https://picsum.photos/id/45/300/300" />
+            <CategorySelect category="Made For You" image="https://picsum.photos/id/76/300/300" />
+            <CategorySelect category="New Release" image="https://picsum.photos/id/56/300/300" />
+            <CategorySelect category="New Release" image="https://picsum.photos/id/25/300/300" />
+            <CategorySelect category="Podcasts" image="https://picsum.photos/id/103/300/300" />
+            <CategorySelect category="Audiobooks" image="https://picsum.photos/id/244/300/300" />
+            <CategorySelect category="Made For You" image="https://picsum.photos/id/202/300/300" />
+            <CategorySelect category="New Release" image="https://picsum.photos/id/101/300/300" />
+            <CategorySelect category="New Release" image="https://picsum.photos/id/120/300/300" />
             <CategorySelect category="Podcasts" image="https://picsum.photos/id/40/300/300" />
             <CategorySelect category="Audiobooks" image="https://picsum.photos/id/45/300/300" />
             <CategorySelect category="Made For You" image="https://picsum.photos/id/76/300/300" />
