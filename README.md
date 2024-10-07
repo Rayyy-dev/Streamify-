@@ -16,6 +16,9 @@
 ## Tech Stack
 - **Vue.js**: Frontend framework for reactive and modular development
 - **Tailwind CSS**: Utility-first CSS framework for custom styles
+
 - **JavaScript**: Making things work under the hood
 
 ![Screenshot 2024-10-06 194816](https://github.com/user-attachments/assets/f9a09e5f-64c9-4e1a-b05e-45dbecc1d3f3)
+
+![Screenshot 2024-10-07 193025](https://github.com/user-attachments/assets/8c8e4f79-dbbc-4133-8424-0818948f39b5)
